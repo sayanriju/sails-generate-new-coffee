@@ -4,7 +4,9 @@
   "description": "Generate a new Sails app in CoffeeScript.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "controller",
@@ -19,7 +21,8 @@
   "dependencies": {
     "lodash": ">=2.4.x",
     "merge-defaults": ">=0.1.0",
-    "async": "~0.2.9"
+    "async": "~0.2.9",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "sails-generate": "*",
@@ -33,5 +36,6 @@
     "type": "new",
     "behavior": "modified implementation of `sails new`",
     "sailsVersion": "~0.10.0"
-  }
+  },
+  "snyk": true
 }
